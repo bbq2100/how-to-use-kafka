@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    stream:
+        bindings:
+          output:
+            destination: some_topic
+        kafka:
+           binder:
+             brokers: 192.168.99.100
+             zkNodes: 192.168.99.100
+
+server:
+ port: ${random.int[1024,65536]}
